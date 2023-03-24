@@ -533,7 +533,7 @@ public class VodController extends BaseController {
         mPlayerRetry.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.replay(true);
+                listener.replay(false);
                 hideBottom();
             }
         });
@@ -541,7 +541,7 @@ public class VodController extends BaseController {
         mPlayerRetry.setOnLongClickListener(new OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                listener.replay(false);
+                listener.replay(true);
                 hideBottom();
                 return true;
             }
@@ -1371,7 +1371,7 @@ public class VodController extends BaseController {
             int duration = (int) mControlWrapper.getDuration();
             int currentPosition = (int) mControlWrapper.getCurrentPosition();
             // Fast Forward or Backward by 10 seconds
-            int position = (int) (10000.0f * tapDirection) + currentPosition;
+            int position = (int) (30000.0f * tapDirection) + currentPosition;
             if (position > duration) position = duration;
             if (position < 0) position = 0;
             updateSeekUI(currentPosition, position, duration);

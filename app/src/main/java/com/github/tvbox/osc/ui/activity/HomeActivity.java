@@ -111,7 +111,7 @@ public class HomeActivity extends BaseActivity {
         public void run() {
             Date date = new Date();
             @SuppressLint("SimpleDateFormat")
-            SimpleDateFormat timeFormat = new SimpleDateFormat(getString(R.string.hm_date1) + ", " + getString(R.string.hm_date2));
+            SimpleDateFormat timeFormat = new SimpleDateFormat(getString(R.string.hm_date1) + " " + getString(R.string.hm_date2));
             tvDate.setText(timeFormat.format(date));
             mHandler.postDelayed(this, 1000);
         }
@@ -233,23 +233,22 @@ public class HomeActivity extends BaseActivity {
         tvName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                dataInitOk = false;
-//                jarInitOk = true;
-//                showSiteSwitch();
+                reloadHome();
+            }
+        });
+
+        tvName.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
                 File dir = getCacheDir();
                 FileUtils.recursiveDelete(dir);
                 dir = getExternalCacheDir();
                 FileUtils.recursiveDelete(dir);
                 Toast.makeText(HomeActivity.this, getString(R.string.hm_cache_del), Toast.LENGTH_SHORT).show();
-            }
-        });
-        tvName.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                reloadHome();
                 return true;
             }
         });
+
         // Button : Wifi >> Go into Android Wifi Settings -------------
         tvWifi.setOnClickListener(new View.OnClickListener() {
             @Override

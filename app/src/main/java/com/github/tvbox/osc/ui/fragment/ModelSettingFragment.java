@@ -815,9 +815,9 @@ public class ModelSettingFragment extends BaseLazyFragment {
 
     String getThemeView(int type) {
         if (type == 0) {
-            return "奈飞";
+            return "默认";
         } else if (type == 1) {
-            return "哆啦";
+            return "奈飞";
         } else if (type == 2) {
             return "百事";
         } else if (type == 3) {

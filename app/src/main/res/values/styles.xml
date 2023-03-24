@@ -20,7 +20,7 @@
     </style>
 
     <!-- Alternative Themes -->
-    <style name="NetfxTheme" parent="AppTheme.NoActionBar">
+    <style name="DoraeTheme" parent="AppTheme.NoActionBar">
         <item name="color_theme">#D81F26</item>
         <item name="color_theme_80">#CCD81F26</item>
         <item name="color_theme_70">#B3D81F26</item>
@@ -29,7 +29,7 @@
         <item name="color_theme_40">#66D81F26</item>
         <item name="color_theme_dark_70">#B38C1418</item>
     </style>
-    <style name="DoraeTheme" parent="AppTheme.NoActionBar">
+    <style name="NetfxTheme" parent="AppTheme.NoActionBar">
         <item name="color_theme">#18A2E7</item>
         <item name="color_theme_80">#CC18A2E7</item>
         <item name="color_theme_70">#B318A2E7</item>
